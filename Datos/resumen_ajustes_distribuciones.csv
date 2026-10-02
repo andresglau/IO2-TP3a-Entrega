@@ -1,0 +1,11 @@
+VA,familia,parametros,aic,fuente
+HIJOS,NegBin,"r=0.367, p=0.284",167996.75650961773,reshare_count_from_actor
+multiplicador_base (GLM) / r de HIJOS,"NegBin condicional (GLM, NB2, link log)",ver Datos/glm_negbinom_multiplicador_base.csv ; r=0.9802 (alpha=1.0202),148291.3971507526,reshare_count_from_actor ~ superficie+formato+rol+nivel_audiencia+antig_rel
+Atributos del actor del hijo,Bootstrap empírico (conjunto),"2,607 perfiles únicos",,"actor_follower_count, verified_flag, account_type_code"
+Superficie,Discreta empírica,"{'feed': np.float64(42.0), 'group': np.float64(17.7), 'story': np.float64(16.4), 'repost': np.float64(13.9), 'dm': np.float64(10.0)}",,platform_surface_code
+Formato,Discreta empírica,"{'img-macro': np.float64(39.3), 'vid-short': np.float64(34.6), 'txt': np.float64(9.9), 'screenshot': np.float64(8.3), 'link-ext': np.float64(4.6), 'poll': np.float64(3.3)}",,content_type_code
+TOX,Beta,"a=1.319, b=2.440",-26772.321118922835,toxicity_index
+TIEMPO_REVISION,lognorm,[  0.6267   0.     169.034 ],187871.41918605453,moderation_latency_min (flag=1)
+Vida útil de la cascada,lognorm,[  0.8869   0.     221.2626],66986.20314000126,content_half_life_min (1 por mensaje)
+Tiempo entre eventos,weibull_min,[ 0.6743  0.     53.0878],617400.3561229507,inter_event_time_min (seed_flag=0)
+impressions (derivada),log-log lineal + ruido,"pendiente=0.988, R2=0.806, sigma_resid=0.945",,impressions ~ actor_follower_count
